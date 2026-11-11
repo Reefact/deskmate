@@ -27,7 +27,8 @@ SignalR is open source and its wire protocol is documented, but **SignalR is not
 - `mate.lookAt` — change head/eye gaze.
 - `mate.playAnimation` / `mate.setState` — control movement and presentation.
 - `mate.showMessage` — display a text bubble.
-- `mate.playAudio` / `mate.say` — play supplied speech/audio, optionally with timing information for lip sync.
+- `mate.playAudio` — play externally supplied speech/audio, optionally with timing information for lip sync.
+- `mate.speakText` — synthesize supplied text using a configured optional TTS adapter, then play it and synchronize mouth animation if possible.
 
 **Events** emitted by DeskMate:
 - `input.clicked`, `input.messageSubmitted`, `input.fileDropped`.
@@ -40,8 +41,9 @@ The dotted names above describe concepts only, **not SignalR hub method names** 
 
 - **Output**: voice and/or speech bubbles; mouth animation can be driven by amplitude or timed visemes.
 - **Input**: microphone and/or a text-input bubble.
-- DeskMate transports input and presentation requests; **speech-to-text, text-to-speech, language understanding and AI processing are not intrinsic obligations of the puppet runtime**.
-- Large or streamed audio may need a separate or specialized channel. The precise transport and ownership of audio processing are still undecided.
+- DeskMate transports input and presentation requests. **Speech-to-text, language understanding and AI processing remain outside the puppet runtime**. Technical **text-to-speech is supported as an optional, replaceable presentation capability**; see [0006](0006-voice-and-speech.md).
+- SignalR streaming is a candidate for bidirectional audio transport. Large/real-time audio may need specialized framing or a separate channel; buffering, latency and transport ownership remain to be validated.
+- Audio, speech and input/output adapters must be separated from the core with [Ports & Adapters](0005-ports-and-adapters.md).
 
 ### Security and local deployment
 
