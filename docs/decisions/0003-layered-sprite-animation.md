@@ -30,7 +30,7 @@ Layers compose in a common coordinate system with stable **attachment points / a
 
 ### Speech
 
-Use a separate mouth layer for lip sync.
+Use a separate mouth layer for lip sync. The mouth animation remains part of DeskMate's presentation model; speech synthesis and audio playback are accessed through replaceable ports (see [0005](0005-ports-and-adapters.md) and [0006](0006-voice-and-speech.md)).
 
 - A basic fallback can choose mouth-open shapes from **audio amplitude**.
 - A richer implementation can map **time-coded visemes** from a speech synthesizer to mouth sprites.
