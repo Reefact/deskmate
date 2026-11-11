@@ -27,9 +27,10 @@ A transparent window is **not automatically click-through**. Accurate hit-testin
 
 ## Proposed logical boundaries
 
-- **DeskMate.Core** — assistant behavior, orchestration, tool/agent integrations.
+- **DeskMate.Core** — transport-independent puppet commands, interaction events, runtime state and coordination of presentation (not AI logic).
 - **DeskMate.Animation** — sprites, compositing, state transitions, visemes.
 - **DeskMate.Desktop** — WPF, rendering host, native window and input integration.
+- **DeskMate.Transport.SignalR** (working name) — external control API adapter, hosted within the Windows desktop process; see [0004](0004-open-control-api.md).
 
 These are logical responsibilities; they do not mandate exactly three assemblies or an elaborate abstraction hierarchy.
 
