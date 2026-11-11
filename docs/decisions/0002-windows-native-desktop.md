@@ -27,12 +27,13 @@ A transparent window is **not automatically click-through**. Accurate hit-testin
 
 ## Proposed logical boundaries
 
-- **DeskMate.Core** — transport-independent puppet commands, interaction events, runtime state and coordination of presentation (not AI logic).
+- **DeskMate.Core** — transport-independent puppet commands, interaction events, runtime state, presentation coordination, and relevant capability ports (not AI logic).
 - **DeskMate.Animation** — sprites, compositing, state transitions, visemes.
 - **DeskMate.Desktop** — WPF, rendering host, native window and input integration.
 - **DeskMate.Transport.SignalR** (working name) — external control API adapter, hosted within the Windows desktop process; see [0004](0004-open-control-api.md).
+- **Audio / speech adapters** — microphone capture, playback, and optional local or external speech synthesis. Their boundaries are described in [0005](0005-ports-and-adapters.md) and [0006](0006-voice-and-speech.md).
 
-These are logical responsibilities; they do not mandate exactly three assemblies or an elaborate abstraction hierarchy.
+These are logical responsibilities; they do not mandate a particular number of assemblies or an elaborate abstraction hierarchy. **Ports & Adapters is an accepted principle for technical boundaries**, not an excuse to create speculative interfaces.
 
 ## To validate or explore
 
