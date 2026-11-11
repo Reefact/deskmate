@@ -19,6 +19,10 @@ DeskMate is **not an intelligent assistant or agent in itself**. It is a small, 
 
 All diagrams discussed during the design are collected in **[Architecture diagrams](docs/architecture.md)** (10 Mermaid diagrams covering the Windows overlay, external controllers, SignalR, logical modules, Ports & Adapters, sprite composition, movement, bidirectional audio, TTS, and the superseded cross-platform concept).
 
+## Character asset production
+
+The [AI-assisted sprite production guide](docs/art/ai-sprite-production-guide.md) (French) documents the reference-image workflow, canonical character, the five modular layers, transparent exports, quality checks, asset naming and reusable instructions/prompts for ChatGPT. It is intended for both human contributors and image-generating assistants. Reference photos are not published automatically.
+
 ## Architectural decisions
 
 1. [DeskMate as a programmable puppet](docs/decisions/0001-assistant-scope.md)
