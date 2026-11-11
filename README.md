@@ -1,24 +1,25 @@
 # DeskMate
 
-An extensible desktop assistant that connects to AI agents and tools through an interactive, animated character.
+A programmable Windows desktop puppet: an animated character and interactive console for external assistants, agents, tools, and scripts.
 
-DeskMate is a **Windows-native desktop assistant**. Its character is the user interface, not the product's purpose: the assistant should be able to converse, react to events, and invoke connected agents and tools. The project favors an excellent Windows experience over cross-platform compromises.
+DeskMate is **not an intelligent assistant or agent in itself**. It is a small, expressive **presentation and interaction surface**. External applications decide what to do; DeskMate animates the character, displays messages, plays audio when supplied, and passes user interactions back to its controllers. No AI runtime is required to use it.
 
 ## Direction
 
-- **Windows first, Windows only**: C# / .NET 10, WPF, and targeted Win32 interop.
-- **Lightweight 2D presentation**: composable sprite animations; no game engine or browser shell as a default.
-- **Modular character**: independently animated body, head, eyes, mouth, and accessories.
-- **Extensible assistant**: integrate existing AI agents and local tools rather than reimplementing them.
+- **Windows-native**: C# / .NET 10, WPF, and targeted Win32 interop; prioritize the Windows experience over cross-platform compatibility.
+- **Lightweight 2D character**: composable sprites (body, head, eyes, mouth, and accessories), independent animation tracks, and optional viseme-driven lip sync.
+- **Programmable**: move, animate, look around, show text bubbles, and eventually speak via commands issued by external programs.
+- **Interactive**: report clicks and text input; optionally support microphone input and audio output.
+- **Open, bidirectional API**: transport-independent commands/events; **SignalR is the initial adapter**, with documented contracts for clients in many languages.
+- **No embedded intelligence**: agent/tool orchestration, interpretation of user intent, and speech processing are external concerns.
 
-## Decisions
+## Architectural decisions
 
-The initial product and architecture decisions are recorded here:
-
-1. [Assistant scope and positioning](docs/decisions/0001-assistant-scope.md)
+1. [DeskMate as a programmable puppet](docs/decisions/0001-assistant-scope.md)
 2. [Windows-native desktop technology](docs/decisions/0002-windows-native-desktop.md)
-3. [Composable 2D character and animation](docs/decisions/0003-layered-sprite-animation.md)
+3. [Layered 2D sprite animation](docs/decisions/0003-layered-sprite-animation.md)
+4. [Open control API, SignalR first](docs/decisions/0004-open-control-api.md)
 
-These documents distinguish **accepted decisions** from **future possibilities**, which remain subject to validation.
+The decisions distinguish **accepted direction** from features and implementation details still under discussion, including voice pipelines, client permissions, and simultaneous control by multiple applications.
 
-> Status: early design; no implementation is implied by this README.
+> **Project status:** early design; the documentation describes intended behavior, not implemented features.
