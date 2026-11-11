@@ -15,6 +15,10 @@ DeskMate is **not an intelligent assistant or agent in itself**. It is a small, 
 - **Text-to-speech (TTS)**: allow local Windows speech synthesis as a replaceable default and externally supplied audio; use visemes for lip sync when available.
 - **No embedded intelligence**: agent/tool orchestration, speech recognition, and interpretation of user intent are external concerns; technical speech synthesis is allowed.
 
+## Architecture diagrams
+
+All diagrams discussed during the design are collected in **[Architecture diagrams](docs/architecture.md)** (10 Mermaid diagrams covering the Windows overlay, external controllers, SignalR, logical modules, Ports & Adapters, sprite composition, movement, bidirectional audio, TTS, and the superseded cross-platform concept).
+
 ## Architectural decisions
 
 1. [DeskMate as a programmable puppet](docs/decisions/0001-assistant-scope.md)
