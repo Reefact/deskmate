@@ -34,12 +34,13 @@ An external client can request the puppet to move to a screen position, look at 
 - Keep the **puppet runtime and external communication contract** separate from the clients controlling it.
 - Do **not** put AI-agent orchestration or tool integrations inside the DeskMate core.
 - Provide transport-agnostic commands and events; transport choices are addressed in [0004](0004-open-control-api.md).
+- Use [Ports & Adapters](0005-ports-and-adapters.md) to isolate infrastructure. A configurable TTS adapter may turn supplied text into spoken audio, without introducing intelligence into DeskMate.
 - Multiple unrelated applications should be able to integrate without linking against .NET-specific assemblies.
 
 ## Undecided
 
 - Whether one application exclusively controls the character or several may do so simultaneously, and how conflicts are resolved.
-- Which audio functions are native versus supplied by external components (recording, speech recognition, text-to-speech, visemes, streaming).
+- Detailed voice implementation choices, such as audio framing, providers, viseme timing, and streaming. Local speech synthesis is an optional presentation capability; speech recognition and interpretation remain external (see [0006](0006-voice-and-speech.md)).
 - The precise set of commands, events, lifecycle, and UI conventions.
 
 The overall **Windows-native** strategy and **five-layer sprite composition** are recorded in [0002](0002-windows-native-desktop.md) and [0003](0003-layered-sprite-animation.md).
