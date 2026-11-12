@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>DeskMate</AssemblyName>
+    <RootNamespace>DeskMate.Desktop</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Description>Windows host: transparent WPF character window, Windows TTS, composition root.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="System.Speech" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DeskMate.Core\DeskMate.Core.csproj" />
+    <ProjectReference Include="..\DeskMate.Transport.SignalR\DeskMate.Transport.SignalR.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\assets\characters\**\*.png;..\..\assets\characters\**\*.json"
+          Exclude="..\..\assets\characters\**\source\**"
+          LinkBase="characters"
+          CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

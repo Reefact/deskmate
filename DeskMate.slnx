@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/samples/">
+    <Project Path="samples/DeskMate.Samples.Console/DeskMate.Samples.Console.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/DeskMate.Core/DeskMate.Core.csproj" />
+    <Project Path="src/DeskMate.Desktop/DeskMate.Desktop.csproj" />
+    <Project Path="src/DeskMate.Transport.SignalR/DeskMate.Transport.SignalR.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/DeskMate.Core.Tests/DeskMate.Core.Tests.csproj" />
+    <Project Path="tests/DeskMate.Transport.SignalR.Tests/DeskMate.Transport.SignalR.Tests.csproj" />
+  </Folder>
+</Solution>
