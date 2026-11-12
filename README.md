@@ -15,6 +15,18 @@ DeskMate is **not an intelligent assistant or agent in itself**. It is a small, 
 - **Text-to-speech (TTS)**: allow local Windows speech synthesis as a replaceable default and externally supplied audio; use visemes for lip sync when available.
 - **No embedded intelligence**: agent/tool orchestration, speech recognition, and interpretation of user intent are external concerns; technical speech synthesis is allowed.
 
+## Quick start (Windows, .NET 10 SDK)
+
+```bash
+dotnet run --project src/DeskMate.Desktop
+```
+
+```bash
+dotnet run --project samples/DeskMate.Samples.Console
+```
+
+The first command shows the character on the desktop; the second drives it through the [control protocol](docs/protocol.md) (`http://127.0.0.1:5117/deskmate`). Tests run on any OS with `dotnet test DeskMate.slnx`.
+
 ## Architecture diagrams
 
 All diagrams discussed during the design are collected in **[Architecture diagrams](docs/architecture.md)** (10 Mermaid diagrams covering the Windows overlay, external controllers, SignalR, logical modules, Ports & Adapters, sprite composition, movement, bidirectional audio, TTS, and the superseded cross-platform concept).
@@ -34,4 +46,4 @@ The [AI-assisted sprite production guide](docs/art/ai-sprite-production-guide.md
 
 The decisions distinguish **accepted direction** from features and implementation details still under discussion, including voice pipelines, client permissions, and simultaneous control by multiple applications.
 
-> **Project status:** early design; the documentation describes intended behavior, not implemented features.
+> **Project status:** proof of concept v0.1. A first vertical slice runs end to end (transparent window, movement, gaze, bubbles, text input, Windows TTS, SignalR API); see **[PoC v0.1](docs/poc.md)** for what is implemented, how to run it and its limitations. The rest of the documentation still describes intended behavior.

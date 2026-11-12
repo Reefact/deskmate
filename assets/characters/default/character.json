@@ -1,0 +1,19 @@
+{
+  "id": "default",
+  "displayName": "DeskMate (PoC)",
+  "frameWidth": 210,
+  "frameHeight": 563,
+  "feetAnchor": { "x": 105, "y": 555 },
+  "headAnchor": { "x": 105, "y": 115 },
+  "neutralPose": "gaze-4",
+  "poses": [
+    { "id": "gaze-0", "file": "gaze-0.png", "pitch": 1.0 },
+    { "id": "gaze-1", "file": "gaze-1.png", "pitch": 0.714 },
+    { "id": "gaze-2", "file": "gaze-2.png", "pitch": 0.429 },
+    { "id": "gaze-3", "file": "gaze-3.png", "pitch": 0.143 },
+    { "id": "gaze-4", "file": "gaze-4.png", "pitch": -0.143 },
+    { "id": "gaze-5", "file": "gaze-5.png", "pitch": -0.429 },
+    { "id": "gaze-6", "file": "gaze-6.png", "pitch": -0.714 },
+    { "id": "gaze-7", "file": "gaze-7.png", "pitch": -1.0 }
+  ]
+}

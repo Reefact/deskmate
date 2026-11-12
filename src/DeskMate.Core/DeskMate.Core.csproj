@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Description>Transport- and UI-independent puppet behaviour: commands, presentation state, animation policy and ports.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="DeskMate.Core.Tests" />
+  </ItemGroup>
+
+</Project>
